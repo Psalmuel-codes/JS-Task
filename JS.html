@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var data = [
+           {Principal: 2500, Time: 1.8},
+           {Principal: 1000, Time: 5},
+           {Principal: 3000, Time: 1},
+           {Principal: 2000, Time: 3}
+    ];
+    console.log(data);
+
+    function interestCalculator (data){
+        let interestData = [];
+        for(let i=0; i < data.length; i++){
+            let myInterest = {};
+            let Principal = data[i].Principal;
+            let Time = data[i].Time;
+        if(Principal >= 2500 && Time >1 && Time<3){
+            rate = 3;
+            interest = (Principal*rate*Time)/100;
+            myInterest = {Principal: Principal,
+                            Rate: rate,
+                            Time: Time,
+                            interest: interest};
+                           interestData.push(myInterest); }
+        else if(Principal >=2500 && Time >=3){
+            rate = 4;
+            interest = (Principal*rate*Time)/100;
+            myInterest = {Principal: Principal,
+                            Rate: rate,
+                            Time: Time,
+                            interest: interest}
+                            interestData.push(myInterest);}
+        else if(Principal < 2500, Time <= 1){
+            rate = 2;
+            interest = (Principal*rate*Time)/100;
+            myInterest = {Principal: Principal,
+                            Rate: rate,
+                            Time: Time,
+                            interest: interest}
+                            interestData.push(myInterest);}
+        else {
+            rate = 1;
+            interest = (Principal*rate*Time)/100;
+            myInterest = {Principal: Principal,
+                            Rate: rate,
+                            Time: Time,
+                            interest: interest}
+                            interestData.push(myInterest);}
+        }
+    console.log(interestData);
+    return interestData;
+       }
+     interestCalculator(data);   
+
+    </script>
+</body>
+</html>
